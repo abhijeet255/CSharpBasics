@@ -5,7 +5,7 @@
 		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<StartupObject>CSharp.Swap1</StartupObject>
+		<StartupObject>CSharp.SumOfDigits</StartupObject>
 	</PropertyGroup>
 
 </Project>
