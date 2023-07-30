@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.ExceptionServices;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
@@ -579,6 +580,228 @@ namespace CSharp
             }
         }
     }
+
+    //27. Program to Print the Factorial of a Given Number
+
+    class Factorial
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter any number:");
+            int num = Convert.ToInt32(Console.ReadLine());
+            long ans = 1;
+            for(int i = num; i > 1; i--)
+            {
+               ans=ans*i;
+            }
+            Console.WriteLine("Factorial of {0} is {1}.",num,ans);
+        }
+    }
+
+
+    //28. Program to Print All the Prime Numbers between 1 to 100
+
+    class PrimeNo
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("Prime Numbers Are:");
+            for (int i=2; i <= 100; i++)
+            {
+                int count = 0;
+                for (int j=2; j <= i/2; j++)
+                {
+                    if(i%j==0)
+                    {
+                        count++;
+                        break;
+                    }
+                }
+                if(count==0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+    }
+
+
+    //29. Program to Find the Largest Prime Factor of a Number
+
+    class PrimeNoFactor
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter any number:");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            int count = 0;
+            for (int j = 2; j <= num / 2; j++)
+            {
+                if (num % j == 0)
+                {
+                    count++;
+                    break;
+                }
+            }
+            if (count == 0)
+            {
+                Console.WriteLine("{0} is an prime number and largest factor of this number is {0}",num);
+            }
+            else
+            {
+                Console.WriteLine("{0} is not a prime Number.",num);
+            }
+
+        }
+    }
+
+
+    //30. Program to Check Whether a Given Number is Perfect Number
+
+    //A perfect number is a positive integer that is equal to the sum of its proper divisors.
+
+    class PerfectNumber
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter any number:");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            int count = 0;
+            for (int j = 1; j <= num / 2; j++)
+            {
+                if (num % j == 0)
+                {
+                    count = count + j;
+                }
+            }
+            if (count == num)
+            {
+                Console.WriteLine("{0} is an perfect number.", num);
+            }
+            else
+            {
+                Console.WriteLine("{0} is not a perfect Number.", num);
+            }
+
+        }
+    }
+
+
+    //31. Program to Check Armstrong Number
+
+    //An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself.
+
+    class ArmstrongNo
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter any number:");
+            int num = Convert.ToInt32(Console.ReadLine());
+            int temp = num; 
+            int sum = 0;
+           while(temp> 0)
+            {
+                int rem = temp % 10;
+                sum = sum + (rem * rem * rem);
+                temp /= 10;
+            }
+            if (sum == num)
+            {
+                Console.WriteLine("{0} is an Armstrong number.", num);
+            }
+            else
+            {
+                Console.WriteLine("{0} is not a Armstrong Number.", num);
+            }
+
+        }
+    }
+
+
+    //32. Program to Print Armstrong Number between 1 to 1000
+
+    class ArmstrongNo1
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Armstrong Numbers Between 1 to 1000  are:");
+            for (int i=1; i<1000; i++)
+            {
+                int j = i;
+                int sum = 0;
+                while (j > 0)
+                {
+                    int rem = j % 10;
+                    sum = sum + (rem * rem * rem);
+                    j /= 10;
+                }
+                if(sum==i)
+                {
+                    Console.WriteLine( i);
+                }
+            }
+        }
+    }
+
+
+    //33. Program to Generate the Sum of N Numbers
+
+    class SumOfNNumbers
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter any number:");
+            int num = Convert.ToInt32(Console.ReadLine());
+            int sum = 0;
+            for (int i=num; i>=1; i--)
+            {
+                sum = sum + i;
+            }
+            Console.WriteLine("The sum of numbers upto {0} is {1}",num,sum);
+        }
+    }
+
+
+    //34. Program to Find the Factors of the Given Number
+
+    class Factors
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter any number:");
+            int num = Convert.ToInt32(Console.ReadLine());
+            int sum = 0;
+            Console.WriteLine("The factors of {0} are :",num);
+            for (int i=1; i<=num; i++)
+            {   
+                if(num%i==0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+    }
+
+
+    //35. Program to Generate Random Numbers
+
+    class RandomNumbers
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Some Random Numbers are :");
+            for (int i=1; i<=100; i++)
+            {   
+               Random r=new Random();
+               Console.WriteLine(r.Next(1000));
+            }
+        }
+    }
+
+
     /*
     //2.Write a program to calculate formulae πr2.
     class Operator3
