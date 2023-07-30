@@ -801,6 +801,187 @@ namespace CSharp
         }
     }
 
+    //36.  Program to Check Whether the Given Number is a Amicable Number or Not
+
+    //Amicable numbers are two numbers so related that the sum of the proper divisors of the
+    //one is equal to the other, unity being considered as a proper divisor but not the number itself.
+    class Amicable
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter Any Two NUmbers:");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            int sum1 = 0;
+            int sum2 = 0;
+            for (int i=1; i<a; i++)
+            {   if(a%i==0)
+                {
+                    sum1=sum1+i;
+                }
+            }
+            for (int i=1; i<b; i++)
+            {   if(b%i==0)
+                {
+                    sum2=sum2+i;
+                }
+            }
+            if(a==sum2 && b==sum1)
+            {
+                Console.WriteLine("{0} and {1} are a Pair of Amicable Numbers",a,b);
+            }
+            else
+            {
+                Console.WriteLine("They are not Amicable Numbers");
+            }
+        }
+    }
+
+    //37.  Program to Find Square Root of a Number
+
+    class SquareRoot
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter Any NUmber:");
+            int a = Convert.ToInt32(Console.ReadLine());
+           
+            double root=Math.Sqrt(a);
+            Console.WriteLine("Square root of {0} is {1}",a,root);
+        }
+    }
+
+    //37.  Program to Find Cube Root of a Number
+
+    class CubeRoot
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter Any NUmber:");
+            int a = Convert.ToInt32(Console.ReadLine());
+           
+            double root =Math.Ceiling(Math.Pow(a, (double)1 / 3));
+            Console.WriteLine("Cube root of {0} is {1}",a,root);
+        }
+    }
+
+
+    //38.  Program to Calculate Power of Three
+
+    class PowerOfThree
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter limit From:");
+            int f = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter limit To:");
+            int t = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Cube's Are:");
+            for (int i=f; i<=t;i++)
+            {
+                Console.WriteLine(i+" : "+(i*i*i));
+            }
+        }
+    }
+
+
+    //39.  Program to Generate the Marksheet of the Student
+
+    class MarkSheet
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter Roll Number Of Student:");
+            int r = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Name Of Student:");
+            string n = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("Enter Marks Of Subject1 out of 100:");
+            int s1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Marks Of Subject2 out of 100:");
+            int s2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Marks Of Subject3 out of 100:");
+            int s3 = Convert.ToInt32(Console.ReadLine());
+            double total = s1 + s2 + s3;
+            Console.WriteLine("Total: "+total);
+            double perc = total / 3;
+            Console.WriteLine("Percentage: "+perc);
+            if (perc >= 35 && perc < 50)
+            {
+                Console.WriteLine("Grade is C");
+            }
+            else if(perc >= 50 && perc < 60)
+            {
+                Console.WriteLine("Grade is B");
+            }
+            else if(perc >= 60 && perc < 80)
+            {
+                Console.WriteLine("Grade is A");
+            }
+            else if(perc >= 80 && perc <= 100)
+            {
+                Console.WriteLine("Grade is A+");
+            }
+            else
+            {
+                Console.WriteLine("Fail");
+            }
+        }
+    }
+
+
+    //40.  Program to Get the Local Time
+
+    class Datetime
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(DateTime.Now);
+            TimeZone zone = TimeZone.CurrentTimeZone;
+            DateTime univ = zone.ToUniversalTime(DateTime.Now);
+            Console.WriteLine("Universal Time is {0}", univ);
+        }
+    }
+
+    //41.  Program to Display the Date in Various Formats
+
+    class DateFormates
+    {
+        static void Main(string[] args)
+        {
+            DateTime date = DateTime.Now;
+            Console.WriteLine("Some Date Formates Are:");
+            Console.WriteLine(date);
+            Console.WriteLine(date.ToString("yyyy-mm-dd"));
+            Console.WriteLine(date.ToString("yyyymmdd"));
+            Console.WriteLine(date.ToString("dd-MMM-yy"));
+            Console.WriteLine(date.ToString("M/d/yyyy"));
+            Console.WriteLine(date.ToString("M/d/yy"));
+            Console.WriteLine(date.ToString("MM/dd/yyyy"));
+            Console.WriteLine(date.ToString("MM/dd/yy"));
+            Console.WriteLine(date.ToString("yy/MM/dd"));
+            Console.WriteLine(date.ToString("yy/MM/dd hh:mm:ss"));
+        }
+    }
+
+    //42. Program to Add Two Dates and Compair two dates
+
+    class AddDates
+    {
+        static void Main(string[] args)
+        {
+            DateTime date = DateTime.Now; 
+            Console.WriteLine(date);
+            DateTime datenew= date.AddDays(10);
+            Console.WriteLine(datenew);
+            if(datenew>date)
+            {
+                Console.WriteLine("{0} Occure Before {1}",date,datenew);
+            }
+            DateTime datenew1= date.AddMinutes(10);
+            Console.WriteLine(datenew1);
+        }
+    }
+
 
     /*
     //2.Write a program to calculate formulae πr2.
