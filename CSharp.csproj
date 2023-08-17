@@ -5,7 +5,7 @@
 		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<StartupObject>CSharp.AddDates</StartupObject>
+		<StartupObject>CSharp.Pattern8</StartupObject>
 	</PropertyGroup>
 
 </Project>

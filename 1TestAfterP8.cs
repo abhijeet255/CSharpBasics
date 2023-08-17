@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -90,9 +91,9 @@ namespace CSharp
         {
             Console.WriteLine("Enter Any Number:");
             int a = Convert.ToInt32(Console.ReadLine());
-            if(a%2==0)
+            if (a % 2 == 0)
             {
-                Console.WriteLine("{0} is an Even Number",a);
+                Console.WriteLine("{0} is an Even Number", a);
             }
             else
             {
@@ -180,14 +181,14 @@ namespace CSharp
             Console.WriteLine("Enter Any Number for Range:");
             int a = Convert.ToInt32(Console.ReadLine());
             int sum = 0;
-            for(int i=3;i<=a;i++) 
+            for (int i = 3; i <= a; i++)
             {
-                if(i%3==0 || i%5==0)
+                if (i % 3 == 0 || i % 5 == 0)
                 {
-                    sum=sum+i;
+                    sum = sum + i;
                 }
             }
-            Console.WriteLine("Sum: "+sum);
+            Console.WriteLine("Sum: " + sum);
         }
     }
 
@@ -199,7 +200,7 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            for(int i=17;i<=100;i=i+17) 
+            for (int i = 17; i <= 100; i = i + 17)
             {
                 Console.WriteLine(i);
             }
@@ -244,7 +245,7 @@ namespace CSharp
         {
             Console.WriteLine("Enter Any Number:");
             int a = Convert.ToInt32(Console.ReadLine());
-            Recursion rec= new Recursion();
+            Recursion rec = new Recursion();
             int sum = 0;
             sum = rec.Sum(a);
             Console.WriteLine("The Sum of Digits of Number {0} is {1}", a, sum);
@@ -258,7 +259,7 @@ namespace CSharp
             int sum = 0;
             if (num != 0)
             {
-                return (num%10+(Sum(num/10)));
+                return (num % 10 + (Sum(num / 10)));
             }
             return sum;
         }
@@ -280,7 +281,7 @@ namespace CSharp
             while (temp > 0)
             {
                 rem = temp % 10;
-                sum = sum*10 + rem;
+                sum = sum * 10 + rem;
                 temp /= 10;
             }
             Console.WriteLine("The reverse Number of {0} is {1}", a, sum);
@@ -302,16 +303,16 @@ namespace CSharp
             while (temp > 0)
             {
                 rem = temp % 10;
-                sum = sum*10 + rem;
+                sum = sum * 10 + rem;
                 temp /= 10;
             }
-            if(sum==a)
+            if (sum == a)
             {
-                Console.WriteLine(a+" is a Palindrome Number");
+                Console.WriteLine(a + " is a Palindrome Number");
             }
             else
             {
-                Console.WriteLine(a+" is not a Palindrome Number");
+                Console.WriteLine(a + " is not a Palindrome Number");
             }
         }
     }
@@ -345,12 +346,12 @@ namespace CSharp
             int a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the Power:");
             int b = Convert.ToInt32(Console.ReadLine());
-            int power=1;
-            for(int i = 0; i < b;i++)
+            int power = 1;
+            for (int i = 0; i < b; i++)
             {
                 power = power * a;
             }
-            Console.WriteLine("Power: "+ power);
+            Console.WriteLine("Power: " + power);
         }
     }
 
@@ -363,14 +364,14 @@ namespace CSharp
         {
             Console.WriteLine("Enter Any Number:");
             int a = Convert.ToInt32(Console.ReadLine());
-            int ans=1;
+            int ans = 1;
             Console.WriteLine("Multiplication ");
-            for (int i = 1; i <= 10;i++)
+            for (int i = 1; i <= 10; i++)
             {
                 ans = a * i;
-                Console.WriteLine( ans);
+                Console.WriteLine(ans);
             }
-            
+
         }
     }
 
@@ -382,8 +383,8 @@ namespace CSharp
         {
             Console.WriteLine("Enter a Grade Like O,A,B,P:");
             char a = Convert.ToChar(Console.ReadLine());
-            a=char.ToUpper(a);
-            switch(a)
+            a = char.ToUpper(a);
+            switch (a)
             {
                 case 'O':
                     Console.WriteLine("First Class With Distinction.");
@@ -413,13 +414,13 @@ namespace CSharp
             Console.WriteLine("Enter Any character:");
             char a = Convert.ToChar(Console.ReadLine());
             int ch = a;
-            if(ch>=65 && ch<=90)    //Ascii value 65 to 90 = A to Z
+            if (ch >= 65 && ch <= 90)    //Ascii value 65 to 90 = A to Z
             {
                 Console.WriteLine((char)(ch + 32));
                 //or
                 Console.WriteLine(char.ToLower(a));
             }
-            else if(ch>=97 && ch<=122)   //ASCII value 97 to 122 = a to z
+            else if (ch >= 97 && ch <= 122)   //ASCII value 97 to 122 = a to z
             {
                 Console.WriteLine((char)(ch - 32));
                 //or
@@ -438,8 +439,8 @@ namespace CSharp
             Console.WriteLine("Enter Height Of A Person In CentiMeters:");
             decimal h = Convert.ToDecimal(Console.ReadLine());
             //Using Ternary Operator  --- Condition ? True Values : False value
-            string result= h<150?"Dwarf":
-                            ((h>=150 &&h<165 )?"Average Height":
+            string result = h < 150 ? "Dwarf" :
+                            ((h >= 150 && h < 165) ? "Average Height" :
                             ((h >= 165 && h <= 195) ? "Taller" :
                             "Abnormal Height"));
 
@@ -476,7 +477,7 @@ namespace CSharp
         static void Main(string[] args)
         {
             char choise;
-           do
+            do
             {
                 Console.WriteLine("Enter First Number:");
                 int a = Convert.ToInt32(Console.ReadLine());
@@ -509,9 +510,9 @@ namespace CSharp
                         break;
                 }
                 Console.WriteLine("Enter Y if You want to continue, Otherwise enter N :");
-                choise=Convert.ToChar(Console.ReadLine());
+                choise = Convert.ToChar(Console.ReadLine());
             }
-           while (char.ToUpper(choise)=='Y');
+            while (char.ToUpper(choise) == 'Y');
         }
     }
 
@@ -541,16 +542,16 @@ namespace CSharp
             int b = 1;
             int last = 0;
             Console.WriteLine("Fibonacci Series:");
-            Console.Write(a+", ");
+            Console.Write(a + ", ");
             Console.Write(b);
-            while (last <limit)
+            while (last < limit)
             {
                 last = a + b;
-                if(last >limit)
+                if (last > limit)
                 {
                     break;
                 }
-                Console.Write(", "+last);
+                Console.Write(", " + last);
                 a = b;
                 b = last;
             }
@@ -569,9 +570,9 @@ namespace CSharp
             int b = 1;
             int last = 0;
             Console.WriteLine("Fibonacci Series:");
-            Console.Write(a+", ");
+            Console.Write(a + ", ");
             Console.Write(b);
-            for(int i = 1; i < limit-1; i++)
+            for (int i = 1; i < limit - 1; i++)
             {
                 last = a + b;
                 Console.Write(", " + last);
@@ -590,11 +591,11 @@ namespace CSharp
             Console.WriteLine("Enter any number:");
             int num = Convert.ToInt32(Console.ReadLine());
             long ans = 1;
-            for(int i = num; i > 1; i--)
+            for (int i = num; i > 1; i--)
             {
-               ans=ans*i;
+                ans = ans * i;
             }
-            Console.WriteLine("Factorial of {0} is {1}.",num,ans);
+            Console.WriteLine("Factorial of {0} is {1}.", num, ans);
         }
     }
 
@@ -605,20 +606,20 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            
+
             Console.WriteLine("Prime Numbers Are:");
-            for (int i=2; i <= 100; i++)
+            for (int i = 2; i <= 100; i++)
             {
                 int count = 0;
-                for (int j=2; j <= i/2; j++)
+                for (int j = 2; j <= i / 2; j++)
                 {
-                    if(i%j==0)
+                    if (i % j == 0)
                     {
                         count++;
                         break;
                     }
                 }
-                if(count==0)
+                if (count == 0)
                 {
                     Console.WriteLine(i);
                 }
@@ -647,11 +648,11 @@ namespace CSharp
             }
             if (count == 0)
             {
-                Console.WriteLine("{0} is an prime number and largest factor of this number is {0}",num);
+                Console.WriteLine("{0} is an prime number and largest factor of this number is {0}", num);
             }
             else
             {
-                Console.WriteLine("{0} is not a prime Number.",num);
+                Console.WriteLine("{0} is not a prime Number.", num);
             }
 
         }
@@ -700,9 +701,9 @@ namespace CSharp
         {
             Console.WriteLine("Enter any number:");
             int num = Convert.ToInt32(Console.ReadLine());
-            int temp = num; 
+            int temp = num;
             int sum = 0;
-           while(temp> 0)
+            while (temp > 0)
             {
                 int rem = temp % 10;
                 sum = sum + (rem * rem * rem);
@@ -728,7 +729,7 @@ namespace CSharp
         static void Main(string[] args)
         {
             Console.WriteLine("Armstrong Numbers Between 1 to 1000  are:");
-            for (int i=1; i<1000; i++)
+            for (int i = 1; i < 1000; i++)
             {
                 int j = i;
                 int sum = 0;
@@ -738,9 +739,9 @@ namespace CSharp
                     sum = sum + (rem * rem * rem);
                     j /= 10;
                 }
-                if(sum==i)
+                if (sum == i)
                 {
-                    Console.WriteLine( i);
+                    Console.WriteLine(i);
                 }
             }
         }
@@ -756,11 +757,11 @@ namespace CSharp
             Console.WriteLine("Enter any number:");
             int num = Convert.ToInt32(Console.ReadLine());
             int sum = 0;
-            for (int i=num; i>=1; i--)
+            for (int i = num; i >= 1; i--)
             {
                 sum = sum + i;
             }
-            Console.WriteLine("The sum of numbers upto {0} is {1}",num,sum);
+            Console.WriteLine("The sum of numbers upto {0} is {1}", num, sum);
         }
     }
 
@@ -774,10 +775,10 @@ namespace CSharp
             Console.WriteLine("Enter any number:");
             int num = Convert.ToInt32(Console.ReadLine());
             int sum = 0;
-            Console.WriteLine("The factors of {0} are :",num);
-            for (int i=1; i<=num; i++)
-            {   
-                if(num%i==0)
+            Console.WriteLine("The factors of {0} are :", num);
+            for (int i = 1; i <= num; i++)
+            {
+                if (num % i == 0)
                 {
                     Console.WriteLine(i);
                 }
@@ -793,10 +794,10 @@ namespace CSharp
         static void Main(string[] args)
         {
             Console.WriteLine("Some Random Numbers are :");
-            for (int i=1; i<=100; i++)
-            {   
-               Random r=new Random();
-               Console.WriteLine(r.Next(1000));
+            for (int i = 1; i <= 100; i++)
+            {
+                Random r = new Random();
+                Console.WriteLine(r.Next(1000));
             }
         }
     }
@@ -814,21 +815,23 @@ namespace CSharp
             int b = Convert.ToInt32(Console.ReadLine());
             int sum1 = 0;
             int sum2 = 0;
-            for (int i=1; i<a; i++)
-            {   if(a%i==0)
-                {
-                    sum1=sum1+i;
-                }
-            }
-            for (int i=1; i<b; i++)
-            {   if(b%i==0)
-                {
-                    sum2=sum2+i;
-                }
-            }
-            if(a==sum2 && b==sum1)
+            for (int i = 1; i < a; i++)
             {
-                Console.WriteLine("{0} and {1} are a Pair of Amicable Numbers",a,b);
+                if (a % i == 0)
+                {
+                    sum1 = sum1 + i;
+                }
+            }
+            for (int i = 1; i < b; i++)
+            {
+                if (b % i == 0)
+                {
+                    sum2 = sum2 + i;
+                }
+            }
+            if (a == sum2 && b == sum1)
+            {
+                Console.WriteLine("{0} and {1} are a Pair of Amicable Numbers", a, b);
             }
             else
             {
@@ -845,9 +848,9 @@ namespace CSharp
         {
             Console.WriteLine("Enter Any NUmber:");
             int a = Convert.ToInt32(Console.ReadLine());
-           
-            double root=Math.Sqrt(a);
-            Console.WriteLine("Square root of {0} is {1}",a,root);
+
+            double root = Math.Sqrt(a);
+            Console.WriteLine("Square root of {0} is {1}", a, root);
         }
     }
 
@@ -859,9 +862,9 @@ namespace CSharp
         {
             Console.WriteLine("Enter Any NUmber:");
             int a = Convert.ToInt32(Console.ReadLine());
-           
-            double root =Math.Ceiling(Math.Pow(a, (double)1 / 3));
-            Console.WriteLine("Cube root of {0} is {1}",a,root);
+
+            double root = Math.Ceiling(Math.Pow(a, (double)1 / 3));
+            Console.WriteLine("Cube root of {0} is {1}", a, root);
         }
     }
 
@@ -877,9 +880,9 @@ namespace CSharp
             Console.WriteLine("Enter limit To:");
             int t = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Cube's Are:");
-            for (int i=f; i<=t;i++)
+            for (int i = f; i <= t; i++)
             {
-                Console.WriteLine(i+" : "+(i*i*i));
+                Console.WriteLine(i + " : " + (i * i * i));
             }
         }
     }
@@ -902,22 +905,22 @@ namespace CSharp
             Console.WriteLine("Enter Marks Of Subject3 out of 100:");
             int s3 = Convert.ToInt32(Console.ReadLine());
             double total = s1 + s2 + s3;
-            Console.WriteLine("Total: "+total);
+            Console.WriteLine("Total: " + total);
             double perc = total / 3;
-            Console.WriteLine("Percentage: "+perc);
+            Console.WriteLine("Percentage: " + perc);
             if (perc >= 35 && perc < 50)
             {
                 Console.WriteLine("Grade is C");
             }
-            else if(perc >= 50 && perc < 60)
+            else if (perc >= 50 && perc < 60)
             {
                 Console.WriteLine("Grade is B");
             }
-            else if(perc >= 60 && perc < 80)
+            else if (perc >= 60 && perc < 80)
             {
                 Console.WriteLine("Grade is A");
             }
-            else if(perc >= 80 && perc <= 100)
+            else if (perc >= 80 && perc <= 100)
             {
                 Console.WriteLine("Grade is A+");
             }
@@ -969,16 +972,144 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            DateTime date = DateTime.Now; 
+            DateTime date = DateTime.Now;
             Console.WriteLine(date);
-            DateTime datenew= date.AddDays(10);
+            DateTime datenew = date.AddDays(10);
             Console.WriteLine(datenew);
-            if(datenew>date)
+            if (datenew > date)
             {
-                Console.WriteLine("{0} Occure Before {1}",date,datenew);
+                Console.WriteLine("{0} Occure Before {1}", date, datenew);
             }
-            DateTime datenew1= date.AddMinutes(10);
+            DateTime datenew1 = date.AddMinutes(10);
             Console.WriteLine(datenew1);
+        }
+    }
+
+    //43. Program to Check if a Given Year is a Leap Year
+
+    class LeapYear
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter Any year:");
+            int y = Convert.ToInt32(Console.ReadLine());
+            if ((y % 400 == 0) || (y % 100 != 0) && (y % 4 == 0))
+            {
+                Console.WriteLine("{0} is a leap year.", y);
+            }
+            else
+            {
+                Console.WriteLine("{0} is not a leap year.", y);
+            }
+        }
+    }
+
+    //44. Program to Convert Days into Years, Months and Days
+
+    class Days
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter no. of Days:");
+            int d = Convert.ToInt32(Console.ReadLine());
+            int y = d / 365;
+            int w = (d % 365) / 7;
+            int days = (d % 365) % 7;
+            Console.WriteLine("{0} days equals to {1} year , {2} week and {3} days.", d, y, w, days);
+
+        }
+    }
+
+
+    //45. Program to Print Hello World Without using WriteLine
+
+    class WriteLine
+    {
+        static void Main(string[] args)
+        {
+            System.Console.OpenStandardOutput().BeginWrite(new byte[] { 072, 101,
+            108, 108, 111, 032, 087, 111, 114, 108, 100, 0 }, 0,
+                12, null, null).AsyncWaitHandle.WaitOne();
+        }
+    }
+
+
+    //46.  Program to Display the ATM Transaction
+    class ATM
+    {
+        public static int Main()
+        {
+
+            int amount = 1000, deposit, withdraw;
+            int choice, pin1 = 123, pin;
+            Console.WriteLine("Enter Your Pin Number ");
+            pin = int.Parse(Console.ReadLine());
+            if (pin != pin1)
+            {
+                Console.WriteLine("You Entered Wrong Pin.");
+                return 0;
+            }
+            while (pin == pin1)
+            {
+                Console.WriteLine("Welcome to ATM Service");
+                Console.WriteLine("1. Check Balance");
+                Console.WriteLine("2. Withdraw Cash");
+                Console.WriteLine("3. Deposit Cash");
+                Console.WriteLine("4. Quit");
+                Console.WriteLine("Enter your choice: ");
+                choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        Console.WriteLine("YOUR BALANCE IN Rs : {0}", amount);
+                        break;
+                    case 2:
+                        Console.WriteLine("ENTER THE AMOUNT TO WITHDRAW: ");
+                        withdraw = int.Parse(Console.ReadLine());
+                        if (withdraw % 100 != 0)
+                        {
+                            Console.WriteLine("PLEASE ENTER THE AMOUNT IN MULTIPLES OF 100");
+                        }
+                        else if (withdraw > amount)
+                        {
+                            Console.WriteLine("INSUFFICENT BALANCE");
+                        }
+                        else
+                        {
+                            amount = amount - withdraw;
+                            Console.WriteLine("PLEASE COLLECT CASH");
+                            Console.WriteLine("YOUR CURRENT BALANCE IS {0}", amount);
+                        }
+                        break;
+                    case 3:
+                        Console.WriteLine("ENTER THE AMOUNT TO DEPOSIT");
+                        deposit = int.Parse(Console.ReadLine());
+                        amount = amount + deposit;
+                        Console.WriteLine("YOUR BALANCE IS {0}", amount);
+                        break;
+                    case 4:
+                        pin = 0;
+                        break;
+                }
+            }
+            Console.WriteLine("THANKS FOR USING OUT ATM SERVICE");
+            return 1;
+        }
+    }
+
+
+    //47.  Program to Create a Stop Watch
+    class StopWatch
+    {
+        static void Main()
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            Console.WriteLine("Press Enter when You want to stop stopwatch");
+            Console.ReadLine();
+            stopwatch.Stop();
+            Console.WriteLine("Time Elapsed : {0}",
+                stopwatch.Elapsed);
         }
     }
 
