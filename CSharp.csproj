@@ -5,7 +5,7 @@
 		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<StartupObject>CSharp.Pattern8</StartupObject>
+		<StartupObject>CSharp.Pattern22</StartupObject>
 	</PropertyGroup>
 
 </Project>
