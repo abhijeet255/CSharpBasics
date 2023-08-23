@@ -14,34 +14,61 @@ namespace CSharp
             Console.WriteLine("Enter The Rows:");
             int r = Convert.ToInt32(Console.ReadLine());
             NumberPattern num = new NumberPattern();
-            //Console.WriteLine();
-            //RectanglePattern(r);
-            //Console.WriteLine();
-            //num.RectanglePattern1(r);
-            //Console.WriteLine();
-            //num.RectanglePattern2(r);
-            //Console.WriteLine();
-            //num.RectanglePattern3(r);
-            //Console.WriteLine();
-            //num.TrianglePattern(r);
-            //Console.WriteLine();
-            //num.TrianglePattern1(r);
-            //Console.WriteLine();
-            //num.TrianglePattern2(r);
-            //Console.WriteLine();
-            //num.TrianglePattern3(r);
-            //Console.WriteLine();
-            //num.TrianglePattern4(r);
-            //Console.WriteLine();
-            //num.TrianglePattern5(r);
-            //Console.WriteLine();
-            //num.TrianglePattern6(r);
-            //Console.WriteLine();
-            //num.TrianglePattern7(r);
+            Console.WriteLine();
+            RectanglePattern(r);
+            Console.WriteLine();
+            num.RectanglePattern1(r);
+            Console.WriteLine();
+            num.RectanglePattern2(r);
+            Console.WriteLine();
+            num.RectanglePattern3(r);
+            Console.WriteLine();
+            num.TrianglePattern(r);
+            Console.WriteLine();
+            num.TrianglePattern1(r);
+            Console.WriteLine();
+            num.TrianglePattern2(r);
+            Console.WriteLine();
+            num.TrianglePattern3(r);
+            Console.WriteLine();
+            num.TrianglePattern4(r);
+            Console.WriteLine();
+            num.TrianglePattern5(r);
+            Console.WriteLine();
+            num.TrianglePattern6(r);
+            Console.WriteLine();
+            num.TrianglePattern7(r);
             Console.WriteLine();
             num.TrianglePattern8(r);
             Console.WriteLine();
             num.TrianglePattern9(r);
+            Console.WriteLine();
+            num.TrianglePattern10(r);
+            Console.WriteLine();
+            num.TrianglePattern11(r);
+            Console.WriteLine();
+            num.TrianglePattern12(r);
+            Console.WriteLine();
+            num.TrianglePattern13(r);
+            Console.WriteLine();
+            num.TrianglePattern14(r);
+            Console.WriteLine();
+            num.RectanglePattern4(r);
+            Console.WriteLine();
+            num.XPattern(r);
+            Console.WriteLine();
+            num.TrianglePattern15(r);
+            Console.WriteLine();
+            num.TrianglePattern16(r);
+            Console.WriteLine();
+            num.TrianglePattern17(r);
+            Console.WriteLine();
+            num.TrianglePattern18(r);
+            Console.WriteLine();
+            num.DemoArray();
+            Console.WriteLine();
+            num.BubbleSort();
+            Console.WriteLine();
         }
 
         /* 1. Write a program to print the rectangle Number pattern.
@@ -401,8 +428,8 @@ namespace CSharp
         public void TrianglePattern9(int r)
         {
             int c = 2 * r - 1;
-            int a = r;
-            int b = r;
+            int a = 1;
+            int b = c;
             for (int i = r; i >= 1; i--)
             {
                 for (int j = 1; j <= c; j++)
@@ -411,7 +438,7 @@ namespace CSharp
                     {
                         if (j <= b && j >= a && j % 2 != 0)
                         {
-                            Console.Write(b);
+                            Console.Write(i);
                         }
                         else
                         {
@@ -422,7 +449,7 @@ namespace CSharp
                     {
                         if (j <= b && j >= a && j % 2 == 0)
                         {
-                            Console.Write(b);
+                            Console.Write(i);
                         }
                         else
                         {
@@ -435,5 +462,463 @@ namespace CSharp
                 b--;
             }
         }
+
+        /* 15. Write a Program to print the Solid Diamond Number Pattern.
+
+    1 
+   2 2
+  3 3 3
+ 4 4 4 4
+5 5 5 5 5
+ 4 4 4 4
+  3 3 3
+   2 2
+    1
+
+    */
+        public void TrianglePattern10(int r)
+        {
+            int c = r;
+            int a = r / 2 + 1;
+            int b = r / 2 + 1;
+            for (int i = 1; i <= r; i++)
+            {
+                for (int j = 1; j <= c; j++)
+                {
+                    if (i % 2 == 1)
+                    {
+                        if (j <= b && j >= a && j % 2 != 0)
+                        {
+                            Console.Write(i);
+                        }
+                        else
+                        {
+                            Console.Write(" ");
+                        }
+                    }
+                    else
+                    {
+                        if (j <= b && j >= a && j % 2 == 0)
+                        {
+                            Console.Write(i);
+                        }
+                        else
+                        {
+                            Console.Write(" ");
+                        }
+                    }
+                }
+                Console.WriteLine();
+                if (i < r / 2 + 1)
+                {
+                    a--;
+                    b++;
+                }
+                else
+                {
+                    a++;
+                    b--;
+                }
+            }
+        }
+
+        /* 16. Write a Program to Print the Inverted V Number Pattern.
+
+    1     
+   2 2
+  3   3
+ 4     4
+5       5
+
+    */
+        public void TrianglePattern11(int r)
+        {
+            int c = 2 * r - 1;
+            int a = r;
+            int b = r;
+            for (int i = 1; i <= r; i++)
+            {
+                for (int j = 1; j <= c; j++)
+                {
+                    if (j == b || j == a)
+                    {
+                        Console.Write(i);
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+
+                }
+                Console.WriteLine();
+                a--;
+                b++;
+            }
+        }
+
+        /* 17. Write a Program to Print the V Shape Number Pattern.
+
+5       5 
+ 4     4
+  3   3
+   2 2
+    1
+
+    */
+        public void TrianglePattern12(int r)
+        {
+            int c = 2 * r - 1;
+            int a = 1;
+            int b = c;
+            for (int i = r; i >= 1; i--)
+            {
+                for (int j = 1; j <= c; j++)
+                {
+                    if (j == b || j == a)
+                    {
+                        Console.Write(i);
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+
+                }
+                Console.WriteLine();
+                a++;
+                b--;
+            }
+        }
+
+        /* 18. Write a Program to print the Solid Half Diamond Number Pattern.
+
+5
+54
+543
+5432
+54321
+543210
+54321
+5432
+543
+54
+5
+
+    */
+        public void TrianglePattern13(int r)
+        {
+            int c = r / 2;
+            int b = c;
+            for (int i = 1; i <= r; i++)
+            {
+                for (int j = c; j >= 0; j--)
+                {
+                    if (j >= b)
+                    {
+                        Console.Write(j);
+                    }
+
+                }
+                Console.WriteLine();
+                if (i <= c)
+                    b--;
+                else
+                    b++;
+            }
+        }
+
+        /* 19. Write a Program to print the Solid Inverted Half Diamond Number Pattern.
+
+     5
+    45
+   345
+  2345
+ 12345
+012345
+ 12345
+  2345
+   345
+    45
+     5
+
+    */
+        public void TrianglePattern14(int r)
+        {
+            int c = r / 2;
+            int b = c;
+            for (int i = 1; i <= r; i++)
+            {
+                for (int j = 0; j <= c; j++)
+                {
+                    if (j >= b)
+                    {
+                        Console.Write(j);
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+
+                }
+                Console.WriteLine();
+                if (i <= c)
+                    b--;
+                else
+                    b++;
+            }
+        }
+
+        /* 20. Write a Program to Print the Hollow Diamond Number Pattern.
+
+    1    
+   2 2
+  3   3
+ 4     4
+5       5
+ 4     4
+  3   3
+   2 2
+    1
+
+    */
+        public void RectanglePattern4(int r)
+        {
+            int c = r;
+            int a = c / 2 + 1;
+            int b = a;
+            for (int i = 1; i <= r; i++)
+            {
+                for (int j = 0; j <= c; j++)
+                {
+                    if (j == b || j == a)
+                    {
+                        Console.Write(i);
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+
+                }
+                Console.WriteLine();
+                if (i <= c / 2)
+                {
+                    a++;
+                    b--;
+                }
+                else
+                {
+                    a--;
+                    b++;
+                }
+
+            }
+        }
+
+        /* 21. Write a Program to Print Cross Sign (╳ ) Number Pattern.
+
+1   1
+ 2 2
+  3
+ 4 4
+5   5
+
+    */
+        public void XPattern(int r)
+        {
+            int a = r;
+            for (int i = 1; i <= r; i++)
+            {
+                for (int j = 1; j <= r; j++)
+                {
+                    if (j == i || j == a)
+                    {
+                        Console.Write(i);
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                }
+                a--;
+                Console.WriteLine();
+            }
+        }
+
+        /* 22. Write a Program to print the Fibonacci Half Pyramid Pattern.
+
+1 
+1 2
+3 5 8
+13 21 34 55
+89 144 233 377 610
+
+    */
+        public void TrianglePattern15(int r)
+        {
+            int a = 1;
+            int b = 1;
+            for (int i = 1; i <= r; i++)
+            {
+                for (int j = 1; j <= r; j++)
+                {
+                    if (j <= i)
+                    {
+                        Console.Write(b + " ");
+                        if (i != 1)
+                        {
+                            int temp = b;
+                            b = a + b;
+                            a = temp;
+                        }
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+
+        /* 23. Write a Program to print a butterfly shape Number pattern.
+
+1     7
+12   67
+123 567
+1234567
+123 567
+12   67
+1     7
+
+    */
+        public void TrianglePattern16(int r)
+        {
+            int a = 1;
+            int b = r;
+            for (int i = 1; i <= r; i++)
+            {
+                for (int j = 1; j <= r; j++)
+                {
+                    if (j <= a || j >= b)
+                        Console.Write(j);
+                    else
+                        Console.Write(" ");
+                }
+                Console.WriteLine();
+                if (i <= r / 2)
+                {
+                    a++;
+                    b--;
+                }
+                else
+                {
+                    a--;
+                    b++;
+                }
+            }
+        }
+
+        /* 24. Write a Program to Print the Hollow Half Pyramid Star Pattern.
+
+1    
+22   
+3 3  
+4  4
+55555
+
+    */
+        public void TrianglePattern17(int r)
+        {
+            int a = 1;
+            int b = r;
+            for (int i = 1; i <= r; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    if (j == 1 || i == r || i == j)
+                        Console.Write(i);
+                    else
+                        Console.Write(" ");
+                }
+                Console.WriteLine();
+                if (i <= r / 2)
+                {
+                    a++;
+                    b--;
+                }
+                else
+                {
+                    a--;
+                    b++;
+                }
+            }
+        }
+
+        /* 25. Write a Program to print Floyd's Triangle Number Pattern.
+1 
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+
+    */
+        public void TrianglePattern18(int r)
+        {
+            int a = 1;
+            for (int i = 1; i <= r; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(a + " ");
+                    a++;
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public void DemoArray()
+        {
+            int[] arr = { 0, 1, 0, 1, 2, 1, 2, 0, 2, 1, 0, 1, 2 };
+            int l = arr.Length;
+            for (int j = 0; j < l; j++)
+            {
+                for (int i = j + 1; i < l; i++)
+                {
+                    if (arr[j] > arr[i])
+                    {
+                        int temp = arr[j];
+                        arr[j] = arr[i];
+                        arr[i] = temp;
+                    }
+                }
+            }
+            foreach (int item in arr)
+            {
+                Console.Write(item + " ");
+            }
+        }
+        public void BubbleSort()
+        {
+            int[] arr = { 2, 3, 5, 0, 1, 4, 6, 9, 8, 7 };
+            int l = arr.Length;
+
+            int count = 1;
+            while (count < l - 1)
+            {
+                for (int i = 0; i < l - count; i++)
+                {
+                    if (arr[i] > arr[i + 1])
+                    {
+                        int temp = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = temp;
+                    }
+                }
+                count++;
+            }
+            foreach (int item in arr)
+            {
+                Console.Write(item + " ");
+            }
+        }
+
+
     }
 }
